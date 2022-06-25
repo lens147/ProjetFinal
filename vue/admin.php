@@ -55,7 +55,7 @@
 
                         <?php  foreach($allMyArticle as $allMyArticles):  ?>
                         <tr>
-                            <td maxlength="20" class="pt-3 pb-3"><?php echo $allMyArticles['title']?></td>
+                            <td maxlength="20" class="pt-3 pb-3"><?php echo $allMyArticles['titre']?></td>
                             <td class="pt-3 pb-3"><?php echo $_SESSION['pseudo']?></td> 
                             <td class="pt-3 pb-3"><?php echo $allMyArticles['date']?> </td>
                             <td class="text-center pt-3 pb-3">

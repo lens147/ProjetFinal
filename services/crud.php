@@ -117,6 +117,13 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
+        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $password,String $description,int $id_user)
+        {
+            $stat = $this->database->prepare('UPDATE `user` SET `name`=:name,`lastname`=:lastname,`email`=:email,`pseudo`=:pseudo,`password`=:password,`description`=:description WHERE id_user = :id_user');
+            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':password' => $password, ':description' => $description, ':id_user' => $id_user));
+            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        }
     }
 
 ?>

@@ -13,7 +13,7 @@
                 
         <div class="container-fluid">
             <div>
-                <a class="navbar-brand" href="./accueil.php"><img src="../assets/img/2abe5dc119b244fda757bbcbd019a19a-removebg-preview.png" alt="logo"></a>
+                <a class="navbar-brand" href="./accueil.php"><img src="../assets/img/logo/2abe5dc119b244fda757bbcbd019a19a-removebg-preview.png" alt="logo"></a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

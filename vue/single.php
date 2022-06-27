@@ -5,7 +5,7 @@
 
         $titre = "Mon Article";
 
-        $id_oeuvre = $_GET['id'];
+        $id_oeuvre = htmlspecialchars($_GET['id']);
 
         include('../services/crud.php');
 

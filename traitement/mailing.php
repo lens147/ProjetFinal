@@ -7,10 +7,16 @@
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
     $tokens = $db->recuperation($email);
 
-    $test = $tokens[0]['token'];
+    $token = $tokens[0]['token'];
 
-    $send = mail("$email","Mot de Passe perdu","Bonjour, voici le lien de réinitialisation de mot de passe:
-    http://localhost/CCP/projetFinal/vue/renimdp.php?id=$test");
+
+    $subject = "Récupération de Mot de Passe";
+    $message = "Bonjour,
+    voici le lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/vue/renimdp.php?id=$token";
+
+/*     mail($to,$subject,$message, $headers); */
+
+    mail($email,$subject,$message);
 
     header("Location: ../vue/login.php");
     exit;

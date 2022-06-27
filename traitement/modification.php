@@ -6,7 +6,7 @@
     $title = htmlspecialchars($_POST['title']);
     $modification = htmlspecialchars($_POST['modification']);
     $content = htmlspecialchars($_POST['content']);
-    $oeuvre_id = $_GET['id'];
+    $oeuvre_id = htmlspecialchars($_GET['id']);
 
     date_default_timezone_set("Europe/Paris");
 

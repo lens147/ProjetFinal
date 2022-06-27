@@ -117,10 +117,17 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
-        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $password,String $description,int $id_user)
+        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $description, $id_user)
         {
             $stat = $this->database->prepare('UPDATE `user` SET `name`=:name,`lastname`=:lastname,`email`=:email,`pseudo`=:pseudo,`password`=:password,`description`=:description WHERE id_user = :id_user');
-            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':password' => $password, ':description' => $description, ':id_user' => $id_user));
+            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':description' => $description, ':id_user' => $id_user));
+            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        }
+        public function userInfo(String $id_user)
+        {
+            $stat = $this->database->prepare('SELECT `id_user`, `name`, `lastname`, `email`, `pseudo`, `password`, `description` FROM `user` WHERE id_user = :id_user');
+            $stat->execute(array(':id_user' => $id_user));
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }

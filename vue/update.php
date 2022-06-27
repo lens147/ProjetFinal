@@ -9,7 +9,7 @@
 
         $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
-        $article_id = $_GET['id'];
+        $article_id = htmlspecialchars($_GET['id']);
 
         $articles = $db->oneOeuvre($article_id);
 

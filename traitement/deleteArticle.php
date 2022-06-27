@@ -4,7 +4,7 @@
 
     $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
 
-    $oeuvre_id = $_GET['id'];
+    $oeuvre_id = htmlspecialchars($_GET['id']);
 
     $dropOeuvre = $db->dropOeuvre($oeuvre_id);
 

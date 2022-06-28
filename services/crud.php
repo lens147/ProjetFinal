@@ -110,17 +110,17 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
-        public function changeMDP(String $password,int $id_user)
+        public function changeMDP(String $password,String $token)
         {
-            $stat = $this->database->prepare('UPDATE `user` SET `password`= :password WHERE id_user = :id_user');
-            $stat->execute(array(':password' => $password, ':id_user' => $id_user));
+            $stat = $this->database->prepare('UPDATE `user` SET `password`= :password WHERE token = :token');
+            $stat->execute(array(':password' => $password, ':token' => $token));
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
-        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $description)
+        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $description,String $id_user)
         {
-            $stat = $this->database->prepare('UPDATE `user` SET `name`=:name,`lastname`=:lastname,`email`=:email,`pseudo`=:pseudo,`password`=:password,`description`=:description WHERE id_user = :id_user');
-            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':description' => $description));
+            $stat = $this->database->prepare('UPDATE `user` SET `name`=:name,`lastname`=:lastname,`email`=:email,`pseudo`=:pseudo,`description`=:description WHERE id_user = :id_user');
+            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':description' => $description, ':id_user' => $id_user));
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }

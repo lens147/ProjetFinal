@@ -22,12 +22,12 @@
         
         <form action="../traitement/user.php?id=<?=$id?>" method="post">
             <div>
-                <label for="lastname">Prénom</label>
-                <input type="text" name="lastname" id="lastname" value="<?=$user[0]['name'];?>">
+                <label for="name">Prénom</label>
+                <input type="text" name="name" id="name" value="<?=$user[0]['name'];?>">
             </div>
             <div>
-                <label for="name">Nom</label>
-                <input type="text" name="name" id="name" value="<?=$user[0]['lastname'];?>">
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname" id="lastname" value="<?=$user[0]['lastname'];?>">
             </div>
             <div>
                 <label for="email">Email</label>
@@ -36,14 +36,6 @@
             <div>
                 <label for="pseudo">Pseudo</label>
                 <input type="text" name="pseudo" id="pseudo" value="<?=$user[0]['pseudo'];?>">
-            </div>
-            <div>
-                <label for="password">Mot de Passe</label>
-                <input type="password" name="password" id="password" value="*********">
-            </div>
-            <div>
-                <label for="confirm_password">Confirmation Mot de Passe</label>
-                <input type="password" name="confirm_password" id="confirm_password" value="*********">
             </div>
             <div>
                 <label for="description">Description</label>

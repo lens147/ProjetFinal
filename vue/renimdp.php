@@ -1,6 +1,6 @@
 <?php
 
-    $id_user = $_GET['id'];
+    $id_user = htmlspecialchars($_GET['id']);
 
     $password = !empty($_POST['password']) ? $_POST['password'] : '';
     $repass = !empty($_POST['confirm_password']) ? $_POST['confirm_password'] : '';

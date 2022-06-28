@@ -3,7 +3,7 @@
 <?php
 
     if(isset($error_equal_email_or_pseudo) === false){
-        $message = "votre email ou pseudo est invalide";
+        $message = "votre email ou pseudo est invalide, ou déjà utilisé";
     }
 
     $name = !empty($_POST['name']) ? $_POST['name'] : '';

@@ -16,13 +16,13 @@
         }
         public function insertIntoInscription(String $name,String $lastname,String $email,String $pseudo,String $password,String $token)
         {
-            $stat = $this->database->prepare("INSERT INTO `user`(`name`, `lastname`, `email`, `pseudo`, `password`, `admin`, `token`) VALUES (:name, :lastname, :email, :pseudo, :password, 0, :token)");
+            $stat = $this->database->prepare("INSERT INTO `user`(`name`, `lastname`, `email`, `pseudo`, `password`, `admin`, `token`, `confirmer`) VALUES (:name, :lastname, :email, :pseudo, :password, 0, :token, 0)");
             $result = $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':password' => $password, ':token' => $token));
             return $result;
         }
         public function checkLoginPseudo(String $pseudo,String $password)
         {
-            $fetch = "SELECT `pseudo`, `password` FROM `user` WHERE pseudo = :pseudo AND password = :password";
+            $fetch = "SELECT `pseudo`, `password`, `confirmer` FROM `user` WHERE pseudo = :pseudo AND password = :password";
             $stat = $this->database->prepare($fetch);
             $stat->execute(array(":pseudo" => $pseudo, ":password" => $password));
             $dataPseudo = $stat->fetch(PDO::FETCH_ASSOC);
@@ -31,7 +31,7 @@
         }
         public function checkLoginEmail(String $email,String $password)
         {
-            $fetch = "SELECT `email`, `password` FROM `user` WHERE email = :email AND password = :password";
+            $fetch = "SELECT `email`, `password`, `confirmer` FROM `user` WHERE email = :email AND password = :password";
             $stat = $this->database->prepare($fetch);
             $stat->execute(array(":email" => $email, ":password" => $password));
             $dataEmail = $stat->fetch(PDO::FETCH_ASSOC);
@@ -117,10 +117,10 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
-        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $description, $id_user)
+        public function userModif(String $name,String $lastname,String $email,String $pseudo,String $description)
         {
             $stat = $this->database->prepare('UPDATE `user` SET `name`=:name,`lastname`=:lastname,`email`=:email,`pseudo`=:pseudo,`password`=:password,`description`=:description WHERE id_user = :id_user');
-            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':description' => $description, ':id_user' => $id_user));
+            $stat->execute(array(':name' => $name, ':lastname' => $lastname, ':email' => $email, ':pseudo' => $pseudo, ':description' => $description));
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
@@ -128,6 +128,13 @@
         {
             $stat = $this->database->prepare('SELECT `id_user`, `name`, `lastname`, `email`, `pseudo`, `password`, `description` FROM `user` WHERE id_user = :id_user');
             $stat->execute(array(':id_user' => $id_user));
+            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        }
+        public function confirmation(String $token)
+        {
+            $stat = $this->database->prepare('UPDATE `user` SET `confirmer`= 1 WHERE token = :token');
+            $stat->execute(array(':token' => $token));
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }

@@ -49,9 +49,16 @@
     if ($password_good && $email_validator && $pseudo_regex && $password_regex && $lastname_regex && $name_regex){
 
         if($db->insertIntoInscription($lastname, $name, $email, $pseudo, $hash, $token)){
-            session_start();
-            $_SESSION['pseudo'] = $pseudo;
-            header("Location: ../vue/accueil.php");
+
+
+            $subject = "Confirmation de l'email";
+            $message = "Bonjour,
+            voici le lien de confirmation de votre email: http://localhost/CCP/projetFinal/traitement/confirmation.php?id=$token";
+        
+            mail($email,$subject,$message);
+
+
+            header("Location: ../vue/login.php");
             exit();
         }else{
             $error_equal_email_or_pseudo = false;

@@ -2,11 +2,11 @@
 
     include_once('./../services/crud.php');
 
-    $id_user = htmlspecialchars($_GET['id']);
+    $token_user = htmlspecialchars($_GET['id']);
 
     $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
 
-    $users = $db->confirmation($id_user);
+    $users = $db->confirmation($token_user);
 
     echo "Merci d'avoir confirmé :)";
 

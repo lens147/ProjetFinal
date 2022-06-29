@@ -12,13 +12,13 @@
 
     $subject = "Récupération de Mot de Passe";
     $message = "Bonjour,
-    voici le lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/vue/renimdp.php?id=$token";
+    voici le lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/renimdp?id=$token";
 
 /*     mail($to,$subject,$message, $headers); */
 
     mail($email,$subject,$message);
 
-    header("Location: ../vue/login.php");
+    header("Location: ./../login");
     exit;
 
 ?>

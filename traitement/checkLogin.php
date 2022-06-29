@@ -29,7 +29,7 @@
             $_SESSION['name'] = $user[0]['name'];
             $_SESSION['email'] = $user[0]['email'];
             $_SESSION['password'] = $user[0]['password'];
-            header("Location: ../vue/accueil.php");
+            header("Location: ./../accueil");
             exit;
         }else{
             echo "Veuillez confirmer votre Email";
@@ -48,14 +48,14 @@
             $_SESSION['name'] = $user[0]['name']; 
             $_SESSION['pseudo'] = $user[0]['pseudo']; 
             $_SESSION['password'] = $user[0]['password'];
-            header("Location: ../vue/accueil.php");
+            header("Location: ./../accueil");
             exit;
         }else{
             echo "Veuillez confirmer votre Email";
         }
 
     }else {
-        header("Location: ../vue/login.php");
+        header("Location: ./../login");
         exit;
     }
         

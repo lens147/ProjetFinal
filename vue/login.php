@@ -7,12 +7,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <?php $titre = "Login"; include('./layout/head.php');?>
+    <?php $titre = "Login"; include('./vue/layout/head.php');?>
 
 
     <body class="loginPage">
 
-        <form action="../traitement/checkLogin.php" method="post" class="vh-100 gradient-custom">
+        <form action="./traitement/checkLogin.php" method="post" class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -35,7 +35,7 @@
                         </div>
                             <?=isset($errorConnexion)?>
 
-                        <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="mailing.php">Mot de Passe perdu?</a></p>
+                        <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="./mailing">Mot de Passe perdu?</a></p>
 
                         <button class="btn btn-outline-light btn-lg px-5" type="submit">Connexion</button>
 
@@ -48,7 +48,7 @@
                         </div>
 
                         <div>
-                        <p class="mb-0">Vous n'avez pas de compte? <a href="./inscription.php" class="text-white-50 fw-bold">Inscription</a>
+                        <p class="mb-0">Vous n'avez pas de compte? <a href="./inscription" class="text-white-50 fw-bold">Inscription</a>
                         </p>
                         </div>
 

@@ -6,7 +6,7 @@
 
     $titre = "Accueil";
                 
-    include_once('./../services/crud.php');
+    include_once('./services/crud.php');
 
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
@@ -14,13 +14,13 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-    <?php include('./layout/head.php');?>
+    <?php include('./vue/layout/head.php');?>
 
     <body>
 
-        <?php include('./layout/header.php');$id = $_SESSION['id_user'];$user = $db->userInfo($id);?>
+        <?php include('./vue/layout/header.php');$id = $_SESSION['id_user'];$user = $db->userInfo($id);?>
         
-        <form action="../traitement/user.php?id=<?=$id?>" method="post">
+        <form action="./traitement/user.php?id=<?=$id?>" method="post">
             <div>
                 <label for="name">Prénom</label>
                 <input type="text" name="name" id="name" value="<?=$user[0]['name'];?>">
@@ -43,6 +43,8 @@
             </div>
             <input type="submit" value="Envoyer">
         </form>
+        
+        <?php include('./vue/layout/footer.php');?>
 
     </body>
 </html>

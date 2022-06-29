@@ -8,7 +8,7 @@
 
     $dropOeuvre = $db->dropOeuvre($oeuvre_id);
 
-    header('Location: http://localhost/CCP/projetFinal/vue/admin.php');
+    header('Location: http://localhost/CCP/projetFinal/admin');
     exit;
 
 

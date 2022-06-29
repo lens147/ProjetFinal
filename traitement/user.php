@@ -30,15 +30,15 @@
         if($db->userModif($name, $lastname, $email, $pseudo, $description, $id_user)){
             session_start();
             $_SESSION['pseudo'] = $pseudo;
-            header("Location: ../vue/compte.php");
+            header("Location: ./../compte");
             exit();
         }else{
             $error_equal_email_or_pseudo = false;
-            header("Location: ../vue/compte.php");
+            header("Location: ./../compte");
             exit();
         }
     }else{
-        header("Location: ../vue/accueil.php");
+        header("Location: ./../accueil");
         exit();
     }
 

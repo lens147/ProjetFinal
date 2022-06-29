@@ -28,12 +28,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <?php $titre = "Inscription"; include('./layout/head.php');?>
+    <?php $titre = "Inscription"; include('./vue/layout/head.php');?>
 
 
     <body class="loginPage">
 
-        <form action="../traitement/inscription.php" method="post" class="vh-100 gradient-custom">
+        <form action="./traitement/inscription.php" method="post" class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -93,7 +93,7 @@
                         </div>
 
                         <div>
-                            <p class="mb-0">Vous avez déjà un compte? <a href="./login.php" class="text-white-50 fw-bold">Connexion</a></p>
+                            <p class="mb-0">Vous avez déjà un compte? <a href="./login" class="text-white-50 fw-bold">Connexion</a></p>
                         </div>
 
                     </div>

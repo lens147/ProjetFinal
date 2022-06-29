@@ -1,6 +1,6 @@
 <?php
 
-    $id_user = htmlspecialchars($_GET['id']);
+    $token = htmlspecialchars($_GET['id']);
 
     $password = !empty($_POST['password']) ? $_POST['password'] : '';
     $repass = !empty($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
@@ -12,11 +12,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php $titre = "Mot de Passe perdu"; include('./layout/head.php');?>
+    <?php $titre = "Mot de Passe perdu"; include('./vue/layout/head.php');?>
 
     <body class="loginPage">
 
-        <form action="../traitement/newMDP.php?id=<?=$id_user;?>" method="post" class="vh-100 gradient-custom">
+        <form action="./traitement/newMDP.php?id=<?=$token;?>" method="post" class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">

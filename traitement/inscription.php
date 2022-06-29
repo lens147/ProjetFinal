@@ -58,15 +58,15 @@
             mail($email,$subject,$message);
 
 
-            header("Location: ../vue/login.php");
+            header("Location: ./../login");
             exit();
         }else{
             $error_equal_email_or_pseudo = false;
-            header("Location: ../vue/inscription.php");
+            header("Location: ./../inscription");
             exit();
         }
     }else{
-        header("Location: ../vue/inscription.php");
+        header("Location: ./../inscription");
         exit();
     }
 

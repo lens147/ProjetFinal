@@ -3,10 +3,13 @@
     include_once('./../services/crud.php');
 
     $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
-    $user = $db->getdb();
+
+    session_start();
+/*     $user = $db->getdb(); */
 
     $titre = htmlspecialchars($_POST["titre"]);
-    $user_key = $user[0]['id_user'];
+    $user_key = $_SESSION['id_user'];
+/*     $user_key = $user[0]['id_user']; */
 
 
     
@@ -32,7 +35,7 @@
             move_uploaded_file($tmpName, '../assets/img/oeuvre/'.$fileName);
             $oeuvreAdd = $db->addOeuvre($user_key, $titre, $fileName);
 
-            header("Location: ../vue/img.php");
+            header("Location: ./../img");
             exit;
         }else{
             echo "Mauvaise extension ou taille trop importante, ou erreur";

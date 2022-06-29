@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php $titre = "Mot de passe perdu"; include('./layout/head.php');?>
+    <?php $titre = "Mot de passe perdu"; include('./vue/layout/head.php');?>
 
     <body class="loginPage">
-        <form action="../traitement/mailing.php" method="post" class="vh-100 gradient-custom">
+        <form action="./traitement/mailing.php" method="post" class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">

@@ -1,6 +1,6 @@
 <?php
 
-    include('../services/crud.php');
+    include('./services/crud.php');
 
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
@@ -13,21 +13,14 @@
 <html lang="en">
 
 
-    <?php $titre = "tableau de bord"; include('./layout/head.php');?>
+    <?php $titre = "tableau de bord"; include('./vue/layout/head.php');?>
 
 
     <body>
 
-        <?php include('./layout/header.php');?>
+        <?php include('./vue/layout/header.php');?>
         <?php
 
-        include('./layout/head.php');
-
-            include_once('./../services/crud.php');
-
-            
-            $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
-        
             $user_key = $_SESSION['id_user'];
 
             $allMyArticle = $db->getAllMyOeuvre($user_key);
@@ -39,7 +32,7 @@
             <div class="m-5">
                 <div class="">
                     <h1 class="text-center m-3 text-dark">Manager mes Post</h1>
-                    <button type="button" class="btn btn-primary mr-3"><a class="text-white" href="./create.php">Add Post</a></button>
+                    <button type="button" class="btn btn-primary mr-3"><a class="text-white" href="./img">Add Post</a></button>
                 </div>
                 <div class="row justify-content-center m-3">
                     <table class="table">
@@ -59,8 +52,8 @@
                             <td class="pt-3 pb-3"><?php echo $_SESSION['pseudo']?></td> 
                             <td class="pt-3 pb-3"><?php echo $allMyArticles['date']?> </td>
                             <td class="text-center pt-3 pb-3">
-                                <a href="./update.php?id=<?php echo $allMyArticles['id_article'] ?>" class="text-success m-3">Edit</a>
-                                <a href="../traitement/deleteArticle.php?id=<?php echo $allMyArticles['id_article'] ?>" class="text-danger m-3">Delete</a> 
+                                <a href="./update?id=<?php echo $allMyArticles['id_oeuvre'] ?>" class="text-success m-3">Edit</a>
+                                <a href="./traitement/deleteOeuvre.php?id=<?php echo $allMyArticles['id_oeuvre'] ?>" class="text-danger m-3">Delete</a> 
                             </td>
                         </tr>
                         <?php  endforeach; ?>
@@ -74,7 +67,7 @@
 
         </div>
 
-        <?php include('./layout/footer.php');?>
+        <?php include('./vue/layout/footer.php');?>
 
 
 

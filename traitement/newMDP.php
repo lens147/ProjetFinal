@@ -27,11 +27,11 @@
     if ($password_good && $password_regex){
 
         $test = $db->changeMDP($hash,$token);
-        header("Location: ../vue/login.php");
+        header("Location: ./../login");
         exit();
 
     }else{
-        header("Location: ../vue/renimdp.php?id=$token");
+        header("Location: ./../renimdp?id=$token");
         exit();
     }
 

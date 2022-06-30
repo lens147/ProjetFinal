@@ -39,7 +39,7 @@
                     <div class="card-footer">
                         <div class="d-flex justify-content-between">
                             <small class="text-muted"><?=$oeuvres['date'] ?> </small>
-                            <small><a class="btn btn-dark"href="./single.php?id=<?=$oeuvres['id_oeuvre'];?>">Voir plus</a></small>
+                            <small><a class="btn btn-dark"href="./single?id=<?=$oeuvres['id_oeuvre'];?>">Voir plus</a></small>
                         </div>
                         <small class="text-muted"></small>
                     </div>

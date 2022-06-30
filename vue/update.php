@@ -13,6 +13,9 @@
 
         $oeuvres = $db->oneOeuvre($oeuvre_id);
 
+        $commentaire = $db->getComment($oeuvre_id);
+
+
         include('./vue/layout/head.php');
 
     ?>
@@ -44,6 +47,23 @@
                 </div>
             </div>
         </form>
+
+        <form action="./traitement/comment.php?id=<?php echo $oeuvre_id ?>" method="post">
+            <label for="comment">commentaire</label>
+                <textarea id="comment" name="comment" rows="1" cols="80"></textarea>
+                <input type="submit" value="Envoyer">
+        </form>
+        <?php  foreach($commentaire as $commentaires): ?>
+
+            <div>
+                <p><?=$commentaires['commentaire']?></p>
+                <div>
+                    <p><?=$commentaires['name_user']?></p>
+                    <p><?=$commentaires['date']?></p>
+                </div>
+            </div>
+
+        <?php  endforeach;?>
         <?php include('./vue/layout/footer.php');?>
     </body>
 </html>

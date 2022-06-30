@@ -138,6 +138,20 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
+        public function addComment(String $commentaire,Int $id_user,String $name_user,Int $id_oeuvre)
+        {
+            $stat = $this->database->prepare("INSERT INTO `comment`(`commentaire`, `id_user`, `name_user`, `id_oeuvre`) VALUES (:commentaire, :id_user, :name_user, :id_oeuvre)");
+            $result = $stat->execute(array(':commentaire' => $commentaire, ':id_user' => $id_user, ':name_user' => $name_user, ':id_oeuvre' => $id_oeuvre));
+            return $result;
+        }
+        public function getComment(String $id_oeuvre)
+        {
+            $stat = $this->database->prepare("SELECT * FROM `comment` WHERE id_oeuvre = :id_oeuvre");
+            $stat->execute(array(':id_oeuvre' => $id_oeuvre));
+            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+
+            return $data;
+        }
     }
 
 ?>

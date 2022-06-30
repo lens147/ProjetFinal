@@ -21,7 +21,7 @@
 
         <?php include('./vue/layout/header.php');?>
 
-        <form action="./traitement/modification.php?id=<?php echo $oeuvre_id ?>" method="post">
+        <form action="./traitement/modification.php?id=<?php echo $oeuvre_id ?>" method="post" enctype="multipart/form-data">
             <div class="page-content p-5" id="content">
 
 
@@ -33,6 +33,10 @@
                             </div></br>
                             <div class="d-flex justify-content-center">
                                 <img src="./assets/img/oeuvre/<?php echo $oeuvres[0]['image'];?>" alt="Oeuvre">
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <label for="file"></label>
+                                <input type="file" name="file">
                             </div>
                             <input type="submit" value="Modifier">
                         </div>

@@ -23,10 +23,13 @@
                 <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="./oeuvre">Blog</a>
                 </li>
-                <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./myPublication">Mes Publication</a>
-                </li>
-                <?php if(isset($connect)){echo '<li><a class="nav-link" href="./admin">My Panel</a></li>';}?>
+                <?php if(isset($connect)){echo '<li>
+                                                    <a class="nav-link" href="./admin">My Panel</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" aria-current="page" href="./myPublication">Mes Publication</a>
+                                                </li>'
+                ;}?>
             </ul>
 
             </div>

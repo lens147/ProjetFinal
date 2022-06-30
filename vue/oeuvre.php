@@ -4,7 +4,9 @@
 
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
-    $oeuvre = $db->oeuvre();
+    $oeuvres = $db->oeuvre();
+
+
 
 
 ?>
@@ -17,45 +19,33 @@
 
         <?php include('./vue/layout/header.php'); isset($_SESSION['id_user']);?>
 
-
-        <?php
-
-/*             include_once('./../services/crud.php');
-
-            $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
-
-            $aleatoireArticle = $db->article(); */
-
-        ?>
-
         <div class="page-content p-5" id="content">
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-evenly">
+            <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-evenly">
 
-        <?php  foreach($oeuvre as $oeuvres): ?>
-            <div class="col blog">
-                <div class="card h-100">
-                    <img src="./assets/img/landscape-4572804_1280.jpg" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title"><?php echo $oeuvres['titre']; ?></h3>
-                        <p class="card-text"></p>
-                        <small class="text-muted"><img src="./assets/img/oeuvre/<?php echo $oeuvres['image']; ?>" alt="" width="100%"></small>
+                <?php  foreach($oeuvres as $oeuvre): ?>
+                    <div class="col blog">
+                        <div class="p-5">
+                            <div class="card h-100">
+                                <a class="btn btn-dark" href="./single?id=<?php echo $oeuvre['id_oeuvre']; ?>">
+                                    <div class="card-body">
+                                        <h2 class="card-title"><?php echo $oeuvre['titre']; ?></h2>
+                                        <p class="card-text"></p>
+                                        <p class="text-muted"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%"></p>
 
-                        
-                        
-                    </div>
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-between">
-                            <small class="text-muted"><?php echo $oeuvres['date'] ?></small>
-                            <small><a class="btn btn-dark"href="./single?id=<?php echo $oeuvres['id_oeuvre']; ?>">Voir plus</a></small>
+                                        <div class="d-flex justify-content-between">
+                                            <small class="text-muted"><?php echo $oeuvre['date'] ?></small>
+                                            <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo[0]['name']?></small>
+            
+                                        </div>
+                                        
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <small class="text-muted"></small>
                     </div>
-
-                </div>
+                <?php  endforeach;?>
             </div>
-            <?php  endforeach;?>
-        </div>
         </div>
         <?php include('./vue/layout/footer.php');?>
 

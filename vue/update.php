@@ -58,7 +58,7 @@
             <div>
                 <p><?=$commentaires['commentaire']?></p>
                 <div>
-                    <p><?=$commentaires['name_user']?></p>
+                    <p><?=$commentaires['pseudo_user']?></p>
                     <p><?=$commentaires['date']?></p>
                 </div>
             </div>

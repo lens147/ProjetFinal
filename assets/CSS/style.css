@@ -11,3 +11,12 @@
 .droit{
     margin-right: 40px;
 }
+.homepage{
+    background: #F4EDE8;
+}
+.nameSpace{
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    color: white !important;
+}

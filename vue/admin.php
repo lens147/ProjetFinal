@@ -16,7 +16,7 @@
     <?php $titre = "tableau de bord"; include('./vue/layout/head.php');?>
 
 
-    <body>
+    <body class="homepage">
 
         <?php include('./vue/layout/header.php');?>
         <?php

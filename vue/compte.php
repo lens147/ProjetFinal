@@ -16,7 +16,7 @@
 <html lang="en">
     <?php include('./vue/layout/head.php');?>
 
-    <body>
+    <body class="homepage">
 
         <?php include('./vue/layout/header.php');$id = $_SESSION['id_user'];$user = $db->userInfo($id);?>
         
@@ -43,7 +43,7 @@
             </div>
             <input type="submit" value="Envoyer">
         </form>
-        
+
         <?php include('./vue/layout/footer.php');?>
 
     </body>

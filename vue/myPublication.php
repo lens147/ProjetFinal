@@ -25,8 +25,8 @@
                 <?php  foreach($oeuvres as $oeuvre): ?>
                     <div class="col blog">
                         <div class="p-5">
-                            <div class="card h-100">
-                                <a class="btn btn-dark" href="./update?id=<?php echo $oeuvre['id_oeuvre']; ?>">
+                            <div class="card h-100 border-0 bg-dark shadow">
+                                <a class="btn text-light" href="./update?id=<?php echo $oeuvre['id_oeuvre']; ?>">
                                     <div class="card-body">
                                         <h2 class="card-title text-center text-capitalize"><?php echo $oeuvre['titre']; ?></h2>
                                         <p class="text-muted text-center"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%"> </p>

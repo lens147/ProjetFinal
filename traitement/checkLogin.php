@@ -8,7 +8,7 @@
 
     $hash = hash('sha1',$password);
 
-    $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
+    $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
     $users = $db->getdb();
 

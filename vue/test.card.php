@@ -9,9 +9,6 @@
 
     /* $base_url = $oeuvre['image']; */
 
-
-    $body_color = "blue";
-
 ?>
 
 <!DOCTYPE html>
@@ -24,9 +21,9 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
         <link href="../assets/CSS/style.css" rel="stylesheet">
             <style type="text/css">
-
-                body { background-color: <?php echo $body_color; ?>; }
+        
                 .image{
+                background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
                 width: 400px;

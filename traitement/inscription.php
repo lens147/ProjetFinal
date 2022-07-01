@@ -36,15 +36,13 @@
         $password_good = true;
     }
 
-    
-    $number = rand(2, 99999999999);
 
-    $token = hash('sha1',$number);
+    $token = uniqid('', true);
 
 
     $hash = hash('sha1', $password);
 
-    $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
+    $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
     if ($password_good && $email_validator && $pseudo_regex && $password_regex && $lastname_regex && $name_regex){
 

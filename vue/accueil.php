@@ -19,8 +19,8 @@
         
         <?php include('./vue/layout/header.php'); isset($_SESSION['id_user']);?>
         
-        <h1 class="text-center pt-4">Bienvenue sur mon Blog</h1>
-        <p class="text-center">Vous pouvez voir ci dessous une multitude d'articles créer par une communautée composé de moi et de moi</p>
+        <h1 class="text-center pt-4 text-light">Bienvenue sur mon Blog</h1>
+        <p class="text-center text-light">Vous pouvez voir ci dessous une multitude d'articles créer par une communautée composé de moi et de moi</p>
 
         <div class="page-content p-5" id="content">
 
@@ -29,10 +29,10 @@
                 <?php  foreach($oeuvres as $oeuvre): ?>
                     <div class="col blog">
                         <div class="p-5">
-                            <div class="card h-100">
-                                <a class="btn btn-dark" href="./single?id=<?php echo $oeuvre['id_oeuvre']; ?>">
+                            <div class="card h-100 border-0 bg-dark shadow">
+                                <a class="btn text-light cardLeny" href="./single?id=<?php echo $oeuvre['id_oeuvre']; ?>">
                                     <div class="card-body">
-                                        <h2 class="card-title"><?php echo $oeuvre['titre']; ?></h2>
+                                        <h2 class="card-title h3"><?php echo $oeuvre['titre']; ?></h2>
                                         <p class="card-text"></p>
                                         <p class="text-muted"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%"></p>
 

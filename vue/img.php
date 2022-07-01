@@ -2,7 +2,7 @@
 
     include_once('./services/crud.php');
 
-    $db = new Crud("mysql:host=localhost;dbname=projetfinal", "root", "");
+    $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
     $user = $db->getdb();
 

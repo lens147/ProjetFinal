@@ -16,7 +16,7 @@
 
     ?>
 
-    <body>
+    <body class="homepage">
         <?php include('./vue/layout/header.php');$id_user = $_SESSION['id_user'];$oeuvres = $db->getAllMyOeuvre($id_user);?>
 
         <div class="page-content p-5" id="content">

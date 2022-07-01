@@ -15,7 +15,7 @@
 <html lang="en">
 
     <?php $titre = "Blog"; include('./vue/layout/head.php');?>
-    <body>
+    <body class="homepage">
 
         <?php include('./vue/layout/header.php'); isset($_SESSION['id_user']);?>
 

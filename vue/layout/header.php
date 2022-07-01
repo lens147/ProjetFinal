@@ -9,7 +9,9 @@
 <header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-black">
-        <?='<p class="text-muted" style="position:absolute; top:5px; right:56px;">'.$_SESSION['pseudo'];'</p>'?>
+        <?php
+            if(isset($connect)){echo '<p class="" style="color:#aba7a7; position:absolute; top:5px; right:56px;">Hey ! '.$_SESSION['pseudo'];'</p>';}
+            ?>
         
                 
         <div class="container-fluid">

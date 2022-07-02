@@ -20,13 +20,20 @@
     right: 15px;
     color: #aba7a7;/* aba7a7 */
 }
-.cardLeny{
+/* .cardLeny{
     filter: grayscale(80%);
-}
+} */
 .image{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     width: 400px;
     height: 400px;
+}
+.cardLg{
+    width: 400px;
+    height: 400px;
+}
+.bas{
+    bottom: 0;
 }

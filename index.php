@@ -46,6 +46,9 @@
     $router->map( 'GET', '/update', function() {
         require __DIR__ . '/vue/update.php';
     });
+    $router->map( 'GET', '/test', function() {
+        require __DIR__ . '/vue/test.php';
+    });
 
     // map user details page
 /*     $router->map( 'GET', '/user/[i:id]/', function( $id ) {

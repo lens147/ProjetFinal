@@ -13,7 +13,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <?php include('./vue/layout/head.php');?>
 
     <body class="homepage">

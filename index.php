@@ -46,6 +46,9 @@
     $router->map( 'GET', '/update', function() {
         require __DIR__ . '/vue/update.php';
     });
+    $router->map( 'GET', '/thank', function() {
+        require __DIR__ . '/vue/thank.php';
+    });
     $router->map( 'GET', '/test', function() {
         require __DIR__ . '/vue/test.php';
     });

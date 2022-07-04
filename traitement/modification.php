@@ -4,7 +4,7 @@
     include_once('./../services/crud.php');
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
     $titre = htmlspecialchars($_POST['titre']);
-    $oeuvre_id = htmlspecialchars($_GET['id']);
+    $oeuvre_id = $_GET['id'];
 
     date_default_timezone_set("Europe/Paris");
 

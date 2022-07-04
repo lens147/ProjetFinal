@@ -10,7 +10,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 
     <?php $titre = "tableau de bord"; include('./vue/layout/head.php');?>

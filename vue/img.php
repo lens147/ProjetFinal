@@ -10,7 +10,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <?php $titre = "Création"; include('./vue/layout/head.php');?>
 
     <body>

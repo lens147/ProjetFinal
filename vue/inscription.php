@@ -26,7 +26,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <?php $titre = "Inscription"; include('./vue/layout/head.php');?>
 
@@ -48,38 +48,38 @@
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="lastname">Nom</label>
                             <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" placeholder="Nom" />
-                            <?=$xLast?>
+                            
                         </div>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="name">Prénom</label>
                             <input type="text" name="name" id="name" class="form-control form-control-lg" placeholder="Prénom" />
-                            <?=$xName?>
+                            
                         </div>
 
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="email">Email</label>
                             <input type="text" name="email" id="email" class="form-control form-control-lg" placeholder="Email" />
-                            <?=$mail?>
+                            
                         </div>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="pseudo">Pseudo</label>
                             <input type="text" name="pseudo" id="pseudo" class="form-control form-control-lg" placeholder="Pseudo" />
-                            <?=$pseudonym?>
+                            
                         </div>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="password">Mot de Passe</label>
                             <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Mot de Passe" />
-                            <?=$mdp?>
+                            
                         </div>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="confirm_password">Confirmer le Mot de Passe</label>
                             <input type="password" name="confirm_password" id="confirm_password" class="form-control form-control-lg" placeholder="Confirmer le Mot de Passe" />
-                            <?=$reMdp?>
+                            
                         </div>
 
                         <button class="btn btn-outline-light btn-lg px-5" type="submit">Inscription</button>

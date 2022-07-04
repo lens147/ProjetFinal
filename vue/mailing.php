@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <?php $titre = "Mot de passe perdu"; include('./vue/layout/head.php');?>
 
     <body class="loginPage">

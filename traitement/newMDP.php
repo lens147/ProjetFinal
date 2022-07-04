@@ -1,6 +1,6 @@
 <?php
 
-    $token = htmlspecialchars($_GET['id']);
+    $token = $_GET['id'];
 
     include('../services/crud.php');
 

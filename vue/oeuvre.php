@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <?php $titre = "Blog"; include('./vue/layout/head.php');?>
     <body class="homepage">

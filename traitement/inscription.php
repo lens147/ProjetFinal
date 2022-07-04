@@ -48,15 +48,26 @@
 
         if($db->insertIntoInscription($lastname, $name, $email, $pseudo, $hash, $token)){
 
-
+            $nom = "Confirmation Biche";
             $subject = "Confirmation de l'email";
-            $message = "Bonjour,
-            voici le lien de confirmation de votre email: http://localhost/CCP/projetFinal/traitement/confirmation.php?id=$token";
+            $message = " Confirmer votre adresse email
+
+
+
+            Nous vous remercions d’avoir créé un compte sur Biche.
+            
+            
+            Nous vous invitons à cliquer sur le lien ci-dessous pour confirmer votre email.
+            
+            
+            Lien de confirmation : http://localhost/CCP/projetFinal/traitement/confirmation.php?id=$token";
+
+            $header = 'From:'.$nom;
         
-            mail($email,$subject,$message);
+            mail($email,$subject,$message, $header);
 
 
-            header("Location: ./../login");
+            header("Location: ./../thank");
             exit();
         }else{
             $error_equal_email_or_pseudo = false;

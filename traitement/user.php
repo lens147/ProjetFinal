@@ -1,6 +1,6 @@
 <?php
 
-    $id_user = htmlspecialchars($_GET['id']);
+    $id_user = $_GET['id'];
 
     include_once('./../services/crud.php');
 

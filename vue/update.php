@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <?php
 
@@ -9,7 +9,7 @@
 
         $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
-        $oeuvre_id = htmlspecialchars($_GET['id']);
+        $oeuvre_id = $_GET['id'];
 
         $oeuvres = $db->oneOeuvre($oeuvre_id);
 
@@ -20,7 +20,7 @@
 
     ?>
 
-    <body>
+    <body class="homepage text-light">
 
         <?php include('./vue/layout/header.php');?>
 
@@ -48,19 +48,17 @@
             </div>
         </form>
 
-        <form action="./traitement/comment.php?id=<?php echo $oeuvre_id ?>" method="post">
+        <form class="d-flex" action="./traitement/comment.php?id=<?php echo $oeuvre_id ?>" method="post">
             <label for="comment">commentaire</label>
                 <textarea id="comment" name="comment" rows="1" cols="80"></textarea>
                 <input type="submit" value="Envoyer">
         </form>
         <?php  foreach($commentaire as $commentaires): ?>
 
-            <div>
-                <p><?=$commentaires['commentaire']?></p>
-                <div>
-                    <p><?=$commentaires['pseudo_user']?></p>
-                    <p><?=$commentaires['date']?></p>
-                </div>
+            <div class="m-4 w-50">
+                <div class="d-flex"><p class="h5"><?=$commentaires['name_user']?> <small class="fw-normal">dit :</small></p></div>
+                <div class="border border border-secondary p-1 m-2"><p><?=$commentaires['commentaire']?></p>
+                <div class="d-flex justify-content-end"><small class="small text-muted"><?=$commentaires['date']?></div></small></div>
             </div>
 
         <?php  endforeach;?>

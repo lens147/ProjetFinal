@@ -5,7 +5,7 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <?php $titre = "Login"; include('./vue/layout/head.php');?>
 

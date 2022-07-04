@@ -9,14 +9,14 @@
 
     $token = $tokens[0]['token'];
 
-
-    $subject = "Récupération de Mot de Passe";
+    $nom = "Récupération de Mot de Passe";
+    $subject = "Récupération de votre Mot de Passe";
     $message = "Bonjour,
-    voici le lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/renimdp?id=$token";
+    voici votre lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/renimdp?id=$token";
 
-/*     mail($to,$subject,$message, $headers); */
+    $header = 'From:'.$nom;
 
-    mail($email,$subject,$message);
+    mail($email,$subject,$message,$header);
 
     header("Location: ./../login");
     exit;

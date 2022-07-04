@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
     <?php
 
         $titre = "Oeuvre";
 
-        $id_oeuvre = htmlspecialchars($_GET['id']);
+        $id_oeuvre = $_GET['id'];
 
         include('./services/crud.php');
 
@@ -15,9 +15,7 @@
 
         $id_user = $oeuvres[0]['user_key'];
 
-        $oeuvre_id = htmlspecialchars($_GET['id']);
-
-        $commentaire = $db->getComment($oeuvre_id);
+        $commentaire = $db->getComment($id_oeuvre);
 
 
         include('./vue/layout/head.php');
@@ -53,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <form action="./traitement/comment.php?id=<?php echo $oeuvre_id ?>" method="post">
+        <form action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
             <label for="comment">commentaire</label>
                 <textarea id="comment" name="comment" rows="1" cols="80"></textarea>
                 <input type="submit" value="Envoyer">

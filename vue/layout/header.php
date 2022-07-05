@@ -30,7 +30,10 @@
                                                     <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./myPublication">Mes Publication</a>
                                                 </li>
                                                 <li>
-                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./admin">My Panel</a>
+                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./admin">Mon Panel</a>
+                                                </li>
+                                                <li>
+                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./compte">Mon compte</a>
                                                 </li>'
                 ;}?>
             </ul>

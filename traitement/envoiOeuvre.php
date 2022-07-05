@@ -35,7 +35,7 @@
             move_uploaded_file($tmpName, '../assets/img/oeuvre/'.$fileName);
             $oeuvreAdd = $db->addOeuvre($user_key, $titre, $fileName);
 
-            header("Location: ./../img");
+            header("Location: ./../oeuvre");
             exit;
         }else{
             echo "Mauvaise extension ou taille trop importante, ou erreur";

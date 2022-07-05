@@ -13,10 +13,12 @@
     $name_user = $_SESSION['name'];
 
     if ($comment == '') {
-        header("Location: ./../$back");
+        header("Location: ./../accueil");
         exit();
     }else{
         $commentaire = $db->addComment($comment, $id_user, $name_user, $oeuvre_id);
+        header("Location: ./../accueil");
+        exit();
     }
 
 

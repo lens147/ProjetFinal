@@ -33,10 +33,12 @@
                         <div class="card-body">
                             <h2 class="card-title h3"><?php echo $oeuvre['titre']; ?></h2>
                             <p class="card-text"></p>
-                            <div class="d-block position-absolute bottom-0">
-                              <div class="d-flex justify-content-between w-100">
-                                  <small class="text-muted"><?php echo $oeuvre['date'] ?></small>
-                                  <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo[0]['name']?></small>
+                            <div class="bg-dark">
+                              <div class="d-flex align-items-center"><!-- position-absolute bottom-0" -->
+                                <div class="">
+                                    <small class="text-muted"><?php echo $oeuvre['date'] ?></small>
+                                    <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo[0]['name']?></small>
+                                </div>
                               </div>
                             </div>
                           </div>

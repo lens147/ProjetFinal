@@ -39,9 +39,9 @@
                             </div>
                             <div class="d-flex justify-content-center">
                                 <label for="file"></label>
-                                <input type="file" name="file">
+                                <input type="file" name="file" class="form-control form-control-lg">
                             </div>
-                            <input type="submit" value="Modifier">
+                            <input type="submit" class="btn btn-outline-light btn-lg px-5 loginPage" value="Modifier">
                         </div>
                     </div>
                 </div>
@@ -49,9 +49,31 @@
         </form>
 
         <form class="d-flex" action="./traitement/comment.php?id=<?php echo $oeuvre_id ?>" method="post">
-            <label for="comment">commentaire</label>
-                <textarea id="comment" name="comment" rows="1" cols="80"></textarea>
-                <input type="submit" value="Envoyer">
+            <section class="vh-100 gradient-custom">
+                <div class="container py-5 h-100">
+                    <div class=" h-100">
+                        <div>
+                            <div class="card loginPage text-white" style="border-radius: 1rem;">
+                                <div class="card-body p-5 text-center">
+
+                                    <div class="pb-4">
+
+                                        <h2 class="fw-bold mb-2 text-uppercase">Commenter</h2>
+                                        <div class="form-outline form-white mb-2">
+                                            <label class="form-label" for="comment">Commentaire</label>
+                                            <textarea id="comment" name="comment" rows="1" cols="80" class="form-control form-control-lg"></textarea>
+                                        </div>
+
+                                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Publier</button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </form>
         <?php  foreach($commentaire as $commentaires): ?>
 

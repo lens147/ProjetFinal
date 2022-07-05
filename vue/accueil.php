@@ -15,12 +15,12 @@
 
     ?>
 
-    <body class="homepage">
+    <body class="homepage text-light">
         
         <?php include('./vue/layout/header.php'); isset($_SESSION['id_user']);?>
         
-        <h1 class="text-center pt-4 text-light">Bienvenue sur mon Blog</h1>
-        <p class="text-center text-light">Vous pouvez voir ci dessous une multitude d'articles créer par une communautée composé de moi et de moi</p>
+        <h1 class="text-center pt-4 text-light">Bienvenue sur mon site d'oeuvre</h1>
+        <p class="text-center text-light">Vous pouvez voir ci dessous une multitude oeuvre créer par toute une communautée</p>
 
         <div class="page-content p-5" id="content">
 

@@ -29,8 +29,13 @@
             $_SESSION['name'] = $user[0]['name'];
             $_SESSION['email'] = $user[0]['email'];
             $_SESSION['password'] = $user[0]['password'];
-            header("Location: ./../accueil");
-            exit;
+            if ($_SESSION['admin']) {
+                header("Location: ./../administrateur");
+                exit;
+            }else{
+                header("Location: ./../accueil");
+                exit;
+            }
         }else{
             echo "Veuillez confirmer votre Email";
         }
@@ -48,8 +53,13 @@
             $_SESSION['name'] = $user[0]['name']; 
             $_SESSION['pseudo'] = $user[0]['pseudo']; 
             $_SESSION['password'] = $user[0]['password'];
-            header("Location: ./../accueil");
-            exit;
+            if ($_SESSION['admin']) {
+                header("Location: ./../administrateur");
+                exit;
+            }else{
+                header("Location: ./../accueil");
+                exit;
+            }
         }else{
             echo "Veuillez confirmer votre Email";
         }

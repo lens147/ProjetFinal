@@ -37,3 +37,24 @@
 .bas{
     bottom: 0;
 }
+.wrapper{
+    display: flex;
+    align-items: center;
+    border: 1px black solid;
+    width: 426px;
+    border-radius: 5px;
+    padding: 2px;
+}
+#password:focus{
+    outline: none;
+}
+#password, #repass{
+    width: 100%;
+    border: none;
+    border-right: 0.25px rgb(88, 81, 81) solid;
+}
+#visiblity-toggle, #re-visiblity-toggle{
+    color: grey;
+    cursor: pointer;
+    margin: 0 2px;
+}

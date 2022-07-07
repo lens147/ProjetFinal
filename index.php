@@ -49,6 +49,9 @@
     $router->map( 'GET', '/thank', function() {
         require __DIR__ . '/vue/thank.php';
     });
+    $router->map( 'GET', '/administrateur', function() {
+        require __DIR__ . '/vue/administrateur.php';
+    });
     $router->map( 'GET', '/test', function() {
         require __DIR__ . '/vue/test.php';
     });

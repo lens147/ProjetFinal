@@ -10,9 +10,10 @@
     $token = $tokens[0]['token'];
 
     $nom = "Récupération de Mot de Passe";
-    $subject = "Récupération de votre Mot de Passe";
+    $subject = "Recuperation de votre Mot de Passe";
     $message = "Bonjour,
-    voici votre lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/renimdp?id=$token";
+
+voici votre lien de réinitialisation de mot de passe: http://localhost/CCP/projetFinal/renimdp?id=$token";
 
     $header = 'From:'.$nom;
 

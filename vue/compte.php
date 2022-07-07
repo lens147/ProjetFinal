@@ -4,7 +4,7 @@
         $message = "votre email ou pseudo est invalide";
     }
 
-    $titre = "Accueil";
+    $titre = "Mon compte";
                 
     include_once('./services/crud.php');
 

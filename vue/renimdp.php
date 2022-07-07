@@ -26,16 +26,22 @@
                         <div class="mb-md-5 mt-md-4 pb-5">
 
                         <h2 class="fw-bold mb-2 text-uppercase">Récupération</h2>
-                        <p class="text-white-50 mb-5">Entrer votre nouveau Mot de Passe!</p>
+                        <p class="text-white-50 mb-5">Entrer votre nouveau Mot de Passe !</p>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="nPassword">Nouveau Mot de Passe</label>
-                            <input type="password" name="nPassword" id="nPassword" class="form-control form-control-lg" />
+                            <div class="wrapper">
+                                <input type="password" name="nPassword" id="password" class="form-control form-control-lg" />
+                                <span id="visiblity-toggle" class="material-icons-outlined">visibility_off</span>
+                            </div>
                         </div>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="confirm_password">Confirmer le nouveau Mot de Passe</label>
-                            <input type="password" name="confirm_password" id="confirm_password" class="form-control form-control-lg" />
+                            <div class="wrapper">
+                                <input type="password" name="confirm_password" id="repass" class="form-control form-control-lg" />
+                                <span id="re-visiblity-toggle" class="material-icons-outlined">visibility_off</span>
+                            </div>
                         </div>
 
                         <button class="btn btn-outline-light btn-lg px-5" type="submit">Nouveau Mot de Passe</button>
@@ -46,6 +52,8 @@
                 </div>
             </div>
         </form>
+
+    <script type="text/javascript" src="./assets/JS/main.js"></script>
 
     </body>
 </html>

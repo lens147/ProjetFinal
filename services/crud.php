@@ -75,6 +75,13 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
+        public function getAllOeuvre()
+        {
+            $stat = $this->database->prepare('SELECT * FROM `oeuvre`');
+            $stat->execute(array());
+            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        }
         public function userP(String $pseudo)
         {
             $stat = $this->database->prepare('SELECT * FROM user WHERE pseudo = :pseudo');

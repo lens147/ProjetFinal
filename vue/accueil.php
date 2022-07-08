@@ -19,8 +19,8 @@
         
         <?php include('./vue/layout/header.php'); isset($_SESSION['id_user']);?>
         
-        <h1 class="text-center pt-4 text-light">Bienvenue sur mon site d'oeuvre</h1>
-        <p class="text-center text-light">Vous pouvez voir ci dessous une multitude oeuvre créer par toute une communautée</p>
+        <h1 class="text-center pt-4 text-light">Bienvenue dans la galérie d'oeuvre d'art</h1>
+        <p class="text-center text-light">Le meilleur de l’art à portée de clic</p>
 
         <div class="page-content p-5" id="content">
 

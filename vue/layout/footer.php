@@ -1,3 +1,6 @@
+<?php include('./vue/layout/head.php');?>
+
+
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container my-5">
   <!-- Footer -->
@@ -14,12 +17,11 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
-              Company name
+              BICHE
             </h6>
-            <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit.
+            <p class="text-center">
+            BICHE est une place de marché qui permet aux amateurs d'art de découvrir de nouveaux artistes.
+            BICHE souhaite aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
             </p>
           </div>
           <!-- Grid column -->
@@ -43,7 +45,7 @@
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">
-              Useful links
+              Lien usuels
             </h6>
             <p>
               <a class="text-white">Accueil</a>
@@ -63,7 +65,7 @@
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
             <p><i class="fas fa-home mr-3"></i> Epinal, CCI 4 rue dubrain, FR</p>
-            <p><i class="fas fa-envelope mr-3"></i> pupubour@gmail.com</p>
+            <p><i class="fas fa-envelope mr-3"></i> lemaral2931@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 33 06 54 88 75 84</p>
             <p><i class="fas fa-print mr-3"></i> + 33 03 29 89 87 35</p>
           </div>
@@ -91,7 +93,7 @@
           <!-- Grid column -->
           <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
             <!-- Facebook -->
-            <a
+            <a href="https://www.facebook.com/people/Biche-Galerie-dArt/100083031346084/"
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
@@ -99,7 +101,7 @@
               ></a>
 
             <!-- Twitter -->
-            <a
+            <a href="https://twitter.com/lorsres"
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
@@ -107,7 +109,7 @@
               ></a>
 
             <!-- Google -->
-            <a
+            <a href=""
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
@@ -115,7 +117,7 @@
               ></a>
 
             <!-- Instagram -->
-            <a
+            <a href=""
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"

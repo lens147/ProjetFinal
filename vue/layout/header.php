@@ -24,10 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./oeuvre">Oeuvre</a>
+                <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./oeuvre">Les oeuvres</a>
                 </li>
                 <?php if(isset($connect)){echo '<li class="nav-item">
-                                                    <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./myPublication">Mes Publication</a>
+                                                    <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./myPublication">Mes Publications</a>
                                                 </li>
                                                 <li>
                                                     <a class="nav-link text-white fs-6 fw-bolder" href="./admin">Mon Panel</a>

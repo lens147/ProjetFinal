@@ -10,18 +10,12 @@
     $oeuvre_id = $_GET['id'];
 
     $id_user = $_SESSION['id_user'];
-    $name_user = $_SESSION['name'];
 
-    if ($comment == '') {
-        header("Location: ./../accueil");
-        exit();
-    }else{
-        $commentaire = $db->addComment($comment, $id_user, $name_user, $oeuvre_id);
-        header("Location: ./../accueil");
-        exit();
+    if ($comment != '') {
+        $commentaire = $db->addComment($comment, $id_user, $oeuvre_id);
     }
-
-
+    header("Location: ./../single?id=$oeuvre_id");
+    exit();
 
 
 ?>

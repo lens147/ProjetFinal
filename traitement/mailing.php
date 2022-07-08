@@ -7,7 +7,7 @@
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
     $tokens = $db->recuperation($email);
 
-    $token = $tokens[0]['token'];
+    $token = $tokens['token'];
 
     $nom = "Récupération de Mot de Passe";
     $subject = "Recuperation de votre Mot de Passe";

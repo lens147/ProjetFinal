@@ -32,7 +32,7 @@
                                         <p class="text-muted text-center"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%"> </p>
                                         <div class="d-flex justify-content-between">
                                             <small class="text-muted"><?php echo $oeuvre['date']; ?> </small>
-                                            <small class="text-muted"><?=$_SESSION['name']; ?></small>
+                                            <small class="text-muted"><?=$_SESSION['pseudo']; ?></small>
                                         </div>
                                     </div>
                                 </a>

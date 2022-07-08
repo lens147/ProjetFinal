@@ -35,7 +35,7 @@
 
                                         <div class="d-flex justify-content-between">
                                             <small class="text-muted"><?php echo $oeuvre['date'] ?></small>
-                                            <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo[0]['name']?></small>
+                                            <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo['pseudo']?></small>
             
                                         </div>
                                         

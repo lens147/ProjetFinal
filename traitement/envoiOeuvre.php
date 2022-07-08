@@ -5,11 +5,11 @@
     $db = new Crud("mysql:host=localhost;dbname=projetfinal;charset=utf8mb4", "root", "");
 
     session_start();
-/*     $user = $db->getdb(); */
+
 
     $titre = htmlspecialchars($_POST["titre"]);
     $user_key = $_SESSION['id_user'];
-/*     $user_key = $user[0]['id_user']; */
+
 
 
     

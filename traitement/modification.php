@@ -9,9 +9,9 @@
     date_default_timezone_set("Europe/Paris");
 
     $modification = date("Y-m-d H:i:s");
-    $oeuvres = $db->oneOeuvre($oeuvre_id);
+    $oeuvre = $db->oneOeuvre($oeuvre_id);
 
-    $image = $oeuvres[0]['image'];
+    $image = $oeuvre['image'];
 
     if ($titre == "" || $image == "") {
         header("Location: ./../update?id=$oeuvre_id");

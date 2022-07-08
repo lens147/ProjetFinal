@@ -32,10 +32,10 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <div class="d-flex justify-content-center">
-                                <textarea class="text-center" id="titre" name="titre" rows="1" cols="80"><?php echo $oeuvres[0]['titre'];?></textarea>
+                                <textarea class="text-center" id="titre" name="titre" rows="1" cols="80"><?php echo $oeuvres['titre'];?></textarea>
                             </div></br>
                             <div class="d-flex justify-content-center">
-                                <img src="./assets/img/oeuvre/<?php echo $oeuvres[0]['image'];?>" alt="Oeuvre">
+                                <img src="./assets/img/oeuvre/<?php echo $oeuvres['image'];?>" alt="Oeuvre">
                             </div>
                             <div class="d-flex justify-content-center">
                                 <label for="file"></label>
@@ -78,7 +78,7 @@
         <?php  foreach($commentaire as $commentaires): ?>
 
             <div class="m-4 w-50">
-                <div class="d-flex"><p class="h5"><?=$commentaires['name_user']?> <small class="fw-normal">dit :</small></p></div>
+                <div class="d-flex"><p class="h5"><?=$commentaires['pseudo']?> <small class="fw-normal">dit :</small></p></div>
                 <div class="border border border-secondary p-1 m-2"><p><?=$commentaires['commentaire']?></p>
                 <div class="d-flex justify-content-end"><small class="small text-muted"><?=$commentaires['date']?></div></small></div>
             </div>

@@ -51,7 +51,7 @@
             $fetch = "SELECT `id_oeuvre`,`user_key`, `titre`, `date`, `modification`, `image` FROM `oeuvre` WHERE id_oeuvre = :id_oeuvre";
             $stat = $this->database->prepare($fetch);
             $stat->execute(array(":id_oeuvre" => $id_oeuvre));
-            $result = $stat->fetchAll(PDO::FETCH_ASSOC);
+            $result = $stat->fetch(PDO::FETCH_ASSOC);
             return $result;
         }
         public function oneAutor($id_user)
@@ -59,7 +59,7 @@
             $fetch = "SELECT `id_user`, `lastname`, `name`, `pseudo`, `email`, `password` FROM `user` WHERE id_user = :id_user";
             $stat = $this->database->prepare($fetch);
             $stat->execute(array(":id_user" => $id_user));
-            $result = $stat->fetchAll(PDO::FETCH_ASSOC);
+            $result = $stat->fetch(PDO::FETCH_ASSOC);
             return $result;
         }
         public function addOeuvre(String $user_key,String $titre,String $image)
@@ -86,14 +86,14 @@
         {
             $stat = $this->database->prepare('SELECT * FROM user WHERE pseudo = :pseudo');
             $stat->execute(array(':pseudo' => $pseudo));
-            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            $data = $stat->fetch(PDO::FETCH_ASSOC);
             return $data;
         }
         public function userE(String $email)
         {
             $stat = $this->database->prepare('SELECT * FROM user WHERE email = :email');
             $stat->execute(array(':email' => $email));
-            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            $data = $stat->fetch(PDO::FETCH_ASSOC);
             return $data;
         }
         public function dropOeuvre(int $id_oeuvre)
@@ -114,7 +114,7 @@
         {
             $stat = $this->database->prepare('SELECT `token` FROM `user` WHERE email = :email');
             $stat->execute(array(':email' => $email));
-            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            $data = $stat->fetch(PDO::FETCH_ASSOC);
             return $data;
         }
         public function changeMDP(String $password,String $token)
@@ -135,7 +135,7 @@
         {
             $stat = $this->database->prepare('SELECT `id_user`, `name`, `lastname`, `email`, `pseudo`, `password`, `description` FROM `user` WHERE id_user = :id_user');
             $stat->execute(array(':id_user' => $id_user));
-            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
+            $data = $stat->fetch(PDO::FETCH_ASSOC);
             return $data;
         }
         public function confirmation(String $token)
@@ -145,15 +145,15 @@
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }
-        public function addComment(String $commentaire,Int $id_user,String $name_user,Int $id_oeuvre)
+        public function addComment(String $commentaire,Int $id_user,Int $id_oeuvre)
         {
-            $stat = $this->database->prepare("INSERT INTO `comment`(`commentaire`, `id_user`, `name_user`, `id_oeuvre`) VALUES (:commentaire, :id_user, :name_user, :id_oeuvre)");
-            $result = $stat->execute(array(':commentaire' => $commentaire, ':id_user' => $id_user, ':name_user' => $name_user, ':id_oeuvre' => $id_oeuvre));
+            $stat = $this->database->prepare("INSERT INTO `comment`(`commentaire`, `id_user`, `id_oeuvre`) VALUES (:commentaire, :id_user, :id_oeuvre)");
+            $result = $stat->execute(array(':commentaire' => $commentaire, ':id_user' => $id_user, ':id_oeuvre' => $id_oeuvre));
             return $result;
         }
         public function getComment(String $id_oeuvre)
         {
-            $stat = $this->database->prepare("SELECT * FROM `comment` WHERE id_oeuvre = :id_oeuvre");
+            $stat = $this->database->prepare("SELECT * FROM `comment` INNER JOIN `user` ON comment.id_user = user.id_user WHERE id_oeuvre = :id_oeuvre");
             $stat->execute(array(':id_oeuvre' => $id_oeuvre));
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
 

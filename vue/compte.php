@@ -35,27 +35,27 @@
 
                                         <div class="form-outline form-white mb-2">
                                             <label class="form-label" for="name">Prénom</label>
-                                            <input type="text" name="name" id="name" value="<?=$user[0]['name'];?>" class="form-control form-control-lg" />
+                                            <input type="text" name="name" id="name" value="<?=$user['name'];?>" class="form-control form-control-lg" />
                                         </div>
 
                                         <div class="form-outline form-white mb-2">
                                             <label class="form-label" for="lastname">Nom</label>
-                                            <input type="text" name="lastname" id="lastname" value="<?=$user[0]['lastname'];?>" class="form-control form-control-lg" />
+                                            <input type="text" name="lastname" id="lastname" value="<?=$user['lastname'];?>" class="form-control form-control-lg" />
                                         </div>
 
                                         <div class="form-outline form-white mb-4">
                                             <label class="form-label" for="email">Email</label>
-                                            <input type="email" name="email" id="email" value="<?=$user[0]['email'];?>" class="form-control form-control-lg" />
+                                            <input type="email" name="email" id="email" value="<?=$user['email'];?>" class="form-control form-control-lg" />
                                         </div>
 
                                         <div class="form-outline form-white mb-2">
                                             <label class="form-label" for="pseudo">Pseudo</label>
-                                            <input type="text" name="pseudo" id="pseudo" value="<?=$user[0]['pseudo'];?>" class="form-control form-control-lg" />
+                                            <input type="text" name="pseudo" id="pseudo" value="<?=$user['pseudo'];?>" class="form-control form-control-lg" />
                                         </div>
 
                                         <div class="form-outline form-white mb-3">
                                             <label class="form-label" for="description">Description</label>
-                                            <textarea id="description" name="description" rows="4" cols="80" class="form-control form-control-lg"><?=$user[0]['description'];?></textarea>
+                                            <textarea id="description" name="description" rows="4" cols="80" class="form-control form-control-lg"><?=$user['description'];?></textarea>
                                         </div>
 
                                         <button class="btn btn-outline-light btn-lg px-5" type="submit">Modifier</button>

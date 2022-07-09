@@ -20,8 +20,8 @@
               BICHE
             </h6>
             <p class="text-center">
-            BICHE est une place de marché qui permet aux amateurs d'art de découvrir de nouveaux artistes.
-            BICHE souhaite aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
+              BICHE est une place de marché qui permet aux amateurs d'art de découvrir de nouveaux artistes.
+              BICHE souhaite aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
             </p>
           </div>
           <!-- Grid column -->
@@ -30,13 +30,19 @@
 
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-            <p>
-              <a class="text-white">Bootstrap 5</a>
-            </p>
-            <p>
-              <a class="text-white">PHP</a>
-            </p>
+            <h6 class="text-uppercase mb-4 font-weight-bold">Productions</h6>
+            <div>
+              <p href="" class="text-white">Bootstrap 5</p>
+            </div>
+            <div>
+              <p href="" class="text-white">Google Apis</p>
+            </div>
+            <div>
+              <p href="" class="text-white">JavaScript</p>
+            </div>
+            <div>
+              <p href="" class="text-white">PHP</p>
+            </div>
           </div>
           <!-- Grid column -->
 
@@ -48,13 +54,19 @@
               Lien usuels
             </h6>
             <p>
-              <a class="text-white">Accueil</a>
+              <a href="http://localhost/CCP/projetFinal/accueil" class="text-white">Accueil</a>
             </p>
             <p>
-              <a class="text-white">Blog</a>
+              <a href="http://localhost/CCP/projetFinal/oeuvre" class="text-white">Oeuvre</a>
             </p>
             <p>
-                <?php if(isset($connect)){echo '<a class="text-white" href="./admin.php">Mon Panel</a>';}?>
+                <?php if(isset($connect)){echo '<a class="text-white" href="./compte">Mon Compte</a>';}?>
+            </p>
+            <p>
+                <?php if(isset($connect)){echo '<a class="text-white" href="./admin">Mon Panel</a>';}?>
+            </p>
+            <p>
+              <a target="_blank" href="http://localhost/CCP/projetFinal/mentionsLegal" class="text-white">Mentions Légales</a>
             </p>
           </div>
 
@@ -66,8 +78,8 @@
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
             <p><i class="fas fa-home mr-3"></i> 14, Rue de la belle oeuvre, 88000 Épinal, FR</p>
             <p><i class="fas fa-envelope mr-3"></i> lemaral2931@gmail.com</p>
-            <p><i class="fas fa-phone mr-3"></i> + 33 06 54 88 75 84</p>
-            <p><i class="fas fa-print mr-3"></i> + 33 03 29 89 87 35</p>
+            <p><i class="fas fa-phone mr-3"></i> + 33 6 14 02 20 22</p>
+            <p><i class="fas fa-print mr-3"></i> + 33 3 29 89 87 35</p>
           </div>
           <!-- Grid column -->
         </div>

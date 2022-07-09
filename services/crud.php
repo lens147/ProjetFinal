@@ -40,7 +40,7 @@
         }
         public function oeuvre()
         {
-            $fetch = "SELECT `id_oeuvre`,`user_key`, `titre`, `date`, `modification`, `image` FROM `oeuvre` ";
+            $fetch = "SELECT * FROM `oeuvre` INNER JOIN `user` ON oeuvre.user_key = user.id_user";
             $stat = $this->database->prepare($fetch);
             $stat->execute();
             $result = $stat->fetchAll(PDO::FETCH_ASSOC);
@@ -70,15 +70,8 @@
         }
         public function getAllMyOeuvre($user_key) 
         {
-            $stat = $this->database->prepare('SELECT * FROM `oeuvre` WHERE user_key = :user_key');
+            $stat = $this->database->prepare('SELECT * FROM `oeuvre` INNER JOIN `user` ON oeuvre.user_key = user.id_user WHERE user_key = :user_key');
             $stat->execute(array(':user_key' => $user_key));
-            $data = $stat->fetchAll(PDO::FETCH_ASSOC);
-            return $data;
-        }
-        public function getAllOeuvre()
-        {
-            $stat = $this->database->prepare('SELECT * FROM `oeuvre`');
-            $stat->execute(array());
             $data = $stat->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         }

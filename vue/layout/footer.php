@@ -93,7 +93,7 @@
           <!-- Grid column -->
           <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
             <!-- Facebook -->
-            <a href="https://www.facebook.com/people/Biche-Galerie-dArt/100083031346084/"
+            <a target="_blank" href="https://www.facebook.com/people/Biche-Galerie-dArt/100083031346084/"
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
@@ -101,7 +101,7 @@
               ></a>
 
             <!-- Twitter -->
-            <a href="https://twitter.com/lorsres"
+            <a target="_blank" href="https://twitter.com/lorsres"
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
@@ -109,7 +109,7 @@
               ></a>
 
             <!-- Google -->
-            <a href=""
+            <a target="_blank" href=""
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"
@@ -117,7 +117,7 @@
               ></a>
 
             <!-- Instagram -->
-            <a href=""
+            <a target="_blank" href=""
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"

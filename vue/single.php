@@ -40,9 +40,6 @@
                         <div class="d-flex justify-content-between">
                             <small class="text-muted"><?php echo $oeuvre['date']; ?> </small>
                             <small class="text-muted"><?php $user = $db->oneAutor($id_user); echo $user['pseudo']; ?></small>
-
-
-                            
                         </div>
                         
                         
@@ -51,12 +48,12 @@
                 </div>
             </div>
         </div>
-        <form class="d-flex" action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
+        <form class="d-flex w-25" action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
             <section class="gradient-custom">
                 <div class="container py-5">
                     <div class="">
                         <div>
-                            <div class="card loginPage text-white" style="border-radius: 1rem;">
+                            <div class="card text-white" style="border-radius: 1rem;">
                                 <div class="card-body p-5 text-center">
 
                                     <div class="pb-4">

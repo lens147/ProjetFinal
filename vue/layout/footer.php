@@ -64,7 +64,7 @@
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
             <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3"></i> Epinal, CCI 4 rue dubrain, FR</p>
+            <p><i class="fas fa-home mr-3"></i> 14, Rue de la belle oeuvre, 88000 Épinal, FR</p>
             <p><i class="fas fa-envelope mr-3"></i> lemaral2931@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 33 06 54 88 75 84</p>
             <p><i class="fas fa-print mr-3"></i> + 33 03 29 89 87 35</p>
@@ -108,16 +108,8 @@
                ><i class="fab fa-twitter"></i
               ></a>
 
-            <!-- Google -->
-            <a target="_blank" href=""
-               class="btn btn-outline-light btn-floating m-1"
-               class="text-white"
-               role="button"
-               ><i class="fab fa-google"></i
-              ></a>
-
             <!-- Instagram -->
-            <a target="_blank" href=""
+            <a target="_blank" href="https://www.instagram.com/bubupour/"
                class="btn btn-outline-light btn-floating m-1"
                class="text-white"
                role="button"

@@ -56,6 +56,7 @@
         </form>
 
         <script type="text/javascript" src="./assets/JS/main.js"></script>
+        <script type="text/javascript" src="./assets/JS/visibility.js"></script>
 
     </body>
 </html>

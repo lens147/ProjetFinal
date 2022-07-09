@@ -48,33 +48,34 @@
                 </div>
             </div>
         </div>
-        <form class="d-flex w-25" action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
-            <section class="gradient-custom">
-                <div class="container py-5">
-                    <div class="">
-                        <div>
-                            <div class="card text-white" style="border-radius: 1rem;">
-                                <div class="card-body p-5 text-center">
+        <div class="d-flex">
+            <form class="justify-content-center w-50" action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
+                <section class="gradient-custom">
+                    <div class="container py-5">
+                        <div class="">
+                            <div>
+                                <div class="" style="border-radius: 1rem;">
+                                    <div class="card-body p-5 text-center">
 
-                                    <div class="pb-4">
+                                        <div class="pb-4">
 
-                                        <h2 class="fw-bold mb-2 text-uppercase">Commenter</h2>
-                                        <div class="form-outline form-white mb-2">
-                                            <label class="form-label" for="comment">Commentaire</label>
-                                            <textarea id="comment" name="comment" rows="1" cols="80" class="form-control form-control-lg"></textarea>
+                                            <h2 class="h5 fw-bold mb-2 text-uppercase">Laisser un commentaire</h2>
+                                            <div class="form-outline form-white mb-2">
+                                                <textarea id="comment" name="comment" rows="1" cols="80" class="form-control form-control-lg"></textarea>
+                                            </div>
+
+                                            <button class="btn btn-outline-light mt-2 btn-lg px-5" type="submit">Publier</button>
+
                                         </div>
 
-                                        <button class="btn btn-outline-light btn-lg px-5" type="submit">Publier</button>
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-        </form>
+                </section>
+            </form>
+        </div>
         <?php  foreach($commentaire as $commentaires): ?>
 
             <div class="m-4 w-50">

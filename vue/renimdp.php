@@ -31,17 +31,20 @@
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="nPassword">Nouveau Mot de Passe</label>
                             <div class="wrapper">
-                                <input type="password" name="nPassword" id="password" class="form-control form-control-lg" />
+                                <input type="password" name="nPassword" id="password" class="form-control form-control-lg" placeholder="Mot de Passe" onclick="getElementById('warningPassword').innerHTML = 'Votre mot de passe doit comporter au moins 6 caractères dont un caractère spécial, un nombre, une majuscule et minuscule'" />
                                 <span id="visiblity-toggle" class="material-icons-outlined">visibility_off</span>
                             </div>
+                            <div class="text-warning" style="font-size: 13px; font-weight: 500" id="warningPassword"></div>
+                            <div class="text-danger" style="font-size: 13px; font-weight: 500" id="errorPassword"></div>
                         </div>
 
                         <div class="form-outline form-white mb-4">
                             <label class="form-label" for="confirm_password">Confirmer le nouveau Mot de Passe</label>
                             <div class="wrapper">
-                                <input type="password" name="confirm_password" id="repass" class="form-control form-control-lg" />
+                                <input type="password" name="confirm_password" id="repass" class="form-control form-control-lg" placeholder="Confirmer le Mot de Passe" />
                                 <span id="re-visiblity-toggle" class="material-icons-outlined">visibility_off</span>
                             </div>
+                            <div id="errorRepass" class="text-danger" style="font-size: 13px; font-weight: 500" id="errorRepass"></div>
                         </div>
 
                         <button class="btn btn-outline-light btn-lg px-5" type="submit">Nouveau Mot de Passe</button>
@@ -53,7 +56,8 @@
             </div>
         </form>
 
-    <script type="text/javascript" src="./assets/JS/main.js"></script>
+        <script type="text/javascript" src="./assets/JS/visibility.js"></script>
+        <script type="text/javascript" src="./assets/JS/main.js"></script>
 
     </body>
 </html>

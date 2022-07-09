@@ -108,6 +108,7 @@ $reMdp = (!empty($password_good)?"":"Vos mots de passes doivent être indentique
         </div>
     </form>
 
+        <script type="text/javascript" src="./assets/JS/visibility.js"></script>
     <script type="text/javascript" src="./assets/JS/main.js"></script>
 
 </body>

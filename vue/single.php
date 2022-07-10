@@ -28,7 +28,7 @@
 
         <?php include('./vue/layout/header.php');?>
 
-        <div class="page-content p-5" id="content">
+        <div class="page-content col m-lg-5 p-5" id="content">
 
 
             <div class="col blog">
@@ -49,13 +49,13 @@
             </div>
         </div>
         <div class="d-flex">
-            <form class="justify-content-center w-50" action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
+            <form class="justify-content-center col col-lg-6" action="./traitement/comment.php?id=<?php echo $id_oeuvre ?>" method="post">
                 <section class="gradient-custom">
                     <div class="container py-5">
                         <div class="">
                             <div>
                                 <div class="" style="border-radius: 1rem;">
-                                    <div class="card-body p-5 text-center">
+                                    <div class="card-body col p-xl-5 text-center">
 
                                         <div class="pb-4">
 
@@ -78,7 +78,7 @@
         </div>
         <?php  foreach($commentaire as $commentaires): ?>
 
-            <div class="m-4 w-50">
+            <div class="m-4 col col-md-5">
                 <div class="d-flex"><p class="h5"><?=$commentaires['pseudo']?> <small class="fw-normal">dit :</small></p></div>
                 <div class="border border border-secondary p-1 m-2"><p><?=$commentaires['commentaire']?></p>
                 <div class="d-flex justify-content-end"><small class="small text-muted"><?=$commentaires['date']?></div></small></div>

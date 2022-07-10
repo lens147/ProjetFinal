@@ -22,7 +22,7 @@
         <h1 class="text-center pt-4 text-light">Bienvenue dans la galérie d'oeuvre d'art</h1>
         <p class="text-center text-light">Le meilleur de l’art à portée de clic</p>
         <div class="d-flex justify-content-center">
-            <p class="col w-lg-25 border rounded text-center p-3 mt-3 loginPage">
+            <p class="col col-md-5 border rounded text-center p-3 mt-3 loginPage">
                 BICHE est une place de marché qui permet aux amateurs d'art de découvrir de nouveaux artistes. BICHE souhaite 
                 aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
             </p>
@@ -33,17 +33,17 @@
 
                 <?php  foreach($oeuvres as $oeuvre): ?>
                     <div class="col blog">
-                        <div class="p-lg-5">
-                            <div class="card h-100 border-0 bg-dark shadow">
+                        <div class="p-xl-5">
+                            <div class="card border-0 bg-dark shadow">
                                 <a class="btn text-light cardLeny" href="./single?id=<?php echo $oeuvre['id_oeuvre']; ?>">
                                     <div class="card-body">
                                         <h2 class="card-title h3"><?php echo $oeuvre['titre']; ?></h2>
                                         <p class="card-text"></p>
-                                        <p class="text-muted"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%"></p>
+                                        <p class="text-muted"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%" class="hei"></p>
 
                                         <div class="d-flex justify-content-between">
                                             <small class="text-muted"><?php echo $oeuvre['date'] ?></small>
-                                            <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo['name']?></small>
+                                            <small><?php $user_key = $oeuvre['user_key']; $userInfo = $db->userInfo($user_key); echo $userInfo['pseudo']?></small>
             
                                         </div>
                                         

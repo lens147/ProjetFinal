@@ -24,12 +24,12 @@
             <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-evenly">
                 <?php  foreach($oeuvres as $oeuvre): ?>
                     <div class="col blog">
-                        <div class="p-5">
+                        <div class="p-xl-5">
                             <div class="card h-100 border-0 bg-dark shadow">
                                 <a class="btn text-light" href="./update?id=<?php echo $oeuvre['id_oeuvre']; ?>">
                                     <div class="card-body">
                                         <h2 class="card-title text-center text-capitalize"><?php echo $oeuvre['titre']; ?></h2>
-                                        <p class="text-muted text-center"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%"> </p>
+                                        <p class="text-muted text-center"><img src="./assets/img/oeuvre/<?php echo $oeuvre['image']; ?>" alt="" width="100%" class="hei"> </p>
                                         <div class="d-flex justify-content-between">
                                             <small class="text-muted"><?php echo $oeuvre['date']; ?> </small>
                                             <small class="text-muted"><?=$_SESSION['pseudo']; ?></small>

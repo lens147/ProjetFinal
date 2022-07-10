@@ -19,7 +19,7 @@
                 <a class="navbar-brand" href="./accueil"><img src="./assets/img/logo/2abe5dc119b244fda757bbcbd019a19a-removebg-preview.png" alt="logo" width="50%"></a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon bg-white rounded-3"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -47,7 +47,7 @@
             <?php
 
                 if(isset($connect)){
-                    echo '<li><a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a></li>';
+                    echo '<li class="d-sm-none"><a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a></li>';
                 }else{
                     echo '<li><a class="nav-link fs-6 text fw-bolder text-muted" href="./login">Connexion</a></li> <li><a class="nav-link fs-6 text fw-bolder text-muted ms-4" href="./inscription">inscription</a></li>';
                 }

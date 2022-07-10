@@ -10,10 +10,6 @@
     $titre = htmlspecialchars($_POST["titre"]);
     $user_key = $_SESSION['id_user'];
 
-
-
-    
-
     if(isset($_FILES['file'])){
         $tmpName = $_FILES['file']['tmp_name'];
         $name = $_FILES['file']['name'];

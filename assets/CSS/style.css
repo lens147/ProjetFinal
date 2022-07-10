@@ -1,28 +1,23 @@
-.loginPage {
-    /* fallback for old browsers */
+.loginPage {        /* back-ground purple */
     background: #6a11cb;
     
-    /* Chrome 10-25, Safari 5.1-6 */
     background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
     
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 }
-.droit{
+.droit{     /* mention legal */
     margin-right: 40px;
 }
-.homepage{
-    background: #3d3d3d;/* F4EDE8 */
+.homepage{      /* back-ground dark */
+    background: #3d3d3d;
 }
-.nameSpace{
+.nameSpace{     /* pseudo in header */
     position: absolute;
     top: 10px;
     right: 15px;
-    color: #aba7a7;/* aba7a7 */
+    color: #aba7a7;
 }
-/* .cardLeny{
-    filter: grayscale(80%);
-} */
+
 .image{
     background-position: center;
     background-size: contain;
@@ -30,14 +25,10 @@
     width: 400px;
     height: 400px;
 }
-.cardLg{
-    width: 400px;
-    height: 400px;
-}
 .bas{
     bottom: 0;
 }
-.wrapper{
+.wrapper{       /* password in form */
     display: flex;
     align-items: center;
     border: 1px black solid;
@@ -59,7 +50,7 @@
     margin: 0 2px;
 }
 @media screen and (min-width: 768px) {
-    .hei{
+    .hei{       /* height to oeuvre */
         height : 200px;
     }
 }

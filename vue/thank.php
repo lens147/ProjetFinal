@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <?php include('./vue/layout/head.php');?>
-<body class="bg-dark">
+<body class="homepage">
 
     <div class="page-content col m-lg-5 p-5" id="content">
 

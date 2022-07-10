@@ -28,7 +28,8 @@
             exit;
 
         }else{
-            echo "Veuillez confirmer votre Email";
+            header("Location: ./../thank");
+            exit();
         }
 
 
@@ -43,7 +44,8 @@
             exit;
 
         }else{
-            echo "Veuillez confirmer votre Email";
+            header("Location: ./../thank");
+            exit();
         }
 
     }else {

@@ -43,7 +43,7 @@ $reMdp = (!empty($password_good)?"":"Vos mots de passes doivent être indentique
                     <div class="mb-md-5 mt-md-4 pb-5">
 
                     <h2 class="fw-bold mb-2 text-uppercase">Inscription</h2>
-                    <p class="text-white-50 mb-5">Inscrivez vous ci-dessous!</p>
+                    <p class="text-white-50 mb-5">Inscrivez-vous ci-dessous!</p>
 
                     <div class="form-outline form-white mb-4">
                         <label class="form-label" for="lastname">Nom</label>

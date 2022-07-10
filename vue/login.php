@@ -1,9 +1,3 @@
-<?php
-
-/*     $errorConnexion1 = (!empty($loginCheckPseudo)?"":"Votre email doit être valide");
-    $errorConnexion = isset($errorConnexion) ? $errorConnexion :(!empty($loginCheckEmail)?"":"Identifiant ou Mot de Passe incorrect");
- */
-?>
 <!DOCTYPE html>
 <html lang="fr">
 

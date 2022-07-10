@@ -36,7 +36,7 @@
                                                     <a class="nav-link text-white fs-6 fw-bolder" href="./compte">Mon Compte</a>
                                                 </li>
                                                 <li class="d-block d-lg-none">
-                                                    <a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a>
+                                                    <a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Déconnexion</a>
                                                 </li>';
                         }else{
                             echo    '<li class="d-block d-lg-none">
@@ -58,7 +58,7 @@
             <?php
 
                 if(isset($connect)){
-                    echo '<li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a></li>';
+                    echo '<li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Déconnexion</a></li>';
                 }else{
                     echo '<li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted" href="./login">Connexion</a></li> <li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted ms-4" href="./inscription">Inscription</a></li>';
                 }

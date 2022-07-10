@@ -76,15 +76,17 @@
                 </section>
             </form>
         </div>
-        <?php  foreach($commentaire as $commentaires): ?>
+        <div class="d-flex flex-column-reverse">
+            <?php  foreach($commentaire as $commentaires): ?>
 
-            <div class="m-4 col col-md-5">
-                <div class="d-flex"><p class="h5"><?=$commentaires['pseudo']?> <small class="fw-normal">dit :</small></p></div>
-                <div class="border border border-secondary p-1 m-2"><p><?=$commentaires['commentaire']?></p>
-                <div class="d-flex justify-content-end"><small class="small text-muted"><?=$commentaires['date']?></div></small></div>
-            </div>
+                <div class="m-4 col col-md-5">
+                    <div class="d-flex"><p class="h5"><?=$commentaires['pseudo']?> <small class="fw-normal">dit :</small></p></div>
+                    <div class="border border border-secondary p-1 m-2"><p><?=$commentaires['commentaire']?></p>
+                    <div class="d-flex justify-content-end"><small class="small text-muted"><?=$commentaires['date']?></div></small></div>
+                </div>
 
-        <?php  endforeach;?>
+            <?php  endforeach;?>
+        </div>
         <?php include('./vue/layout/footer.php');?>
     </body>
 </html>

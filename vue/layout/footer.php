@@ -20,7 +20,7 @@
               BICHE
             </h6>
             <p class="text-center">
-              BICHE est une place de marché qui permet aux amateurs d'art de découvrir de nouveaux artistes.
+              BICHE est un lieu qui permet aux amateurs d'art de découvrir de nouveaux artistes.
               BICHE souhaite aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
             </p>
           </div>

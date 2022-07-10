@@ -23,7 +23,7 @@
         <p class="text-center text-light">Le meilleur de l’art à portée de clic</p>
         <div class="d-flex justify-content-center">
             <p class="col col-md-5 border rounded text-center p-3 mt-3 loginPage">
-                BICHE est une place de marché qui permet aux amateurs d'art de découvrir de nouveaux artistes. BICHE souhaite 
+                BICHE est un lieu qui permet aux amateurs d'art de découvrir de nouveaux artistes. BICHE souhaite 
                 aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
             </p>
         </div>

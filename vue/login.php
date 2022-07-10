@@ -19,8 +19,8 @@
                         <p class="text-white-50 mb-5">Entrer votre Identifiant et votre Mot de Passe !</p>
 
                         <div class="form-outline form-white mb-4">
-                            <label class="form-label" for="typeEmailX">Email</label>
-                            <input type="text" name="pseudoEmail" id="typeEmailX" class="form-control form-control-lg" placeholder="Email" />
+                            <label class="form-label" for="typeEmailX">Email ou Pseudo</label>
+                            <input type="text" name="pseudoEmail" id="typeEmailX" class="form-control form-control-lg" placeholder="Email ou Pseudo" />
                         </div>
 
                         <div class="form-outline form-white mb-4">

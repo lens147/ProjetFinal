@@ -9,6 +9,7 @@
 
     $titre = htmlspecialchars($_POST["titre"]);
     $user_key = $_SESSION['id_user'];
+    $pseudo = $_SESSION['pseudo'];
 
     if(isset($_FILES['file'])){
         $tmpName = $_FILES['file']['tmp_name'];
@@ -29,7 +30,8 @@
             $fileName = $uniqueName.'.'.$extension;
 
             move_uploaded_file($tmpName, '../assets/img/oeuvre/'.$fileName);
-            $oeuvreAdd = $db->addOeuvre($user_key, $titre, $fileName);
+
+            $oeuvreAdd = $db->addOeuvre($user_key, $titre, $fileName, $pseudo);
 
             header("Location: ./../oeuvre");
             exit;

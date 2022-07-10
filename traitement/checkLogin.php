@@ -23,13 +23,10 @@
         if($user['confirmer']){
 
             $_SESSION = array_merge($_SESSION,$user);
-            if ($_SESSION['admin']) {
-                header("Location: ./../administrateur");
-                exit;
-            }else{
-                header("Location: ./../accueil");
-                exit;
-            }
+
+            header("Location: ./../accueil");
+            exit;
+
         }else{
             echo "Veuillez confirmer votre Email";
         }
@@ -41,13 +38,10 @@
 
         if($user['confirmer']){
             $_SESSION = array_merge($_SESSION,$user);
-            if ($_SESSION['admin']) {
-                header("Location: ./../administrateur");
-                exit;
-            }else{
-                header("Location: ./../accueil");
-                exit;
-            }
+
+            header("Location: ./../accueil");
+            exit;
+
         }else{
             echo "Veuillez confirmer votre Email";
         }

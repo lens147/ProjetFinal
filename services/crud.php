@@ -62,10 +62,10 @@
             $result = $stat->fetch(PDO::FETCH_ASSOC);
             return $result;
         }
-        public function addOeuvre(String $user_key,String $titre,String $image)
+        public function addOeuvre(String $user_key,String $titre,String $image,String $pseudo_user)
         {
-            $stat = $this->database->prepare("INSERT INTO `oeuvre`(`user_key`, `titre`, `image`) VALUES (:user_key, :titre, :image)");
-            $result = $stat->execute(array(':user_key' => $user_key, ':titre' => $titre, ':image' => $image));
+            $stat = $this->database->prepare("INSERT INTO `oeuvre`(`user_key`, `titre`, `image`, `pseudo_user`) VALUES (:user_key, :titre, :image, :pseudo_user)");
+            $result = $stat->execute(array(':user_key' => $user_key, ':titre' => $titre, ':image' => $image, ':pseudo_user' => $pseudo_user));
             return $result;
         }
         public function getAllMyOeuvre($user_key) 

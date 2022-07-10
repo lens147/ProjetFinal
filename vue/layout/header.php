@@ -24,18 +24,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./oeuvre">Les oeuvres</a>
+                <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./oeuvre">Les Oeuvres</a>
                 </li>
                 <?php if(isset($connect)){echo '<li class="nav-item">
                                                     <a class="nav-link text-white fs-6 fw-bolder" aria-current="page" href="./myPublication">Mes Publications</a>
                                                 </li>
                                                 <li>
-                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./admin">Mon Panel</a>
+                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./admin">Mon Tableau de Bord</a>
                                                 </li>
                                                 <li>
-                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./compte">Mon compte</a>
-                                                </li>'
-                ;}?>
+                                                    <a class="nav-link text-white fs-6 fw-bolder" href="./compte">Mon Compte</a>
+                                                </li>
+                                                <li class="d-block d-lg-none">
+                                                    <a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a>
+                                                </li>';
+                        }else{
+                            echo    '<li class="d-block d-lg-none">
+                                        <a class="nav-link fs-6 text fw-bolder text-muted" href="./login">Connexion</a>
+                                    </li> 
+                                    <li class="d-block d-lg-none">
+                                        <a class="nav-link fs-6 text fw-bolder text-muted" href="./inscription">Inscription</a>
+                                    </li>'
+                        
+                        ;}?>
             </ul>
 
             </div>
@@ -47,9 +58,9 @@
             <?php
 
                 if(isset($connect)){
-                    echo '<li class="d-sm-none"><a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a></li>';
+                    echo '<li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted" href="./traitement/disconnect.php">Deconnexion</a></li>';
                 }else{
-                    echo '<li><a class="nav-link fs-6 text fw-bolder text-muted" href="./login">Connexion</a></li> <li><a class="nav-link fs-6 text fw-bolder text-muted ms-4" href="./inscription">inscription</a></li>';
+                    echo '<li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted" href="./login">Connexion</a></li> <li class="d-none d-lg-block"><a class="nav-link fs-6 text fw-bolder text-muted ms-4" href="./inscription">Inscription</a></li>';
                 }
 
             ?>

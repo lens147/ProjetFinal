@@ -36,8 +36,8 @@
         <div class="d-flex justify-content-center">
             <div class="m-5">
                 <div class="">
-                    <h1 class="text-center m-3 text-white">Manager mes Post</h1>
-                    <button type="button" class="btn btn-primary mr-3"><a class="text-white" href="./img">Add Post</a></button>
+                    <h1 class="text-center m-3 text-white">Administrer mes publications</h1>
+                    <button type="button" class="btn loginPage mr-3 mt-3"><a class="text-white" href="./img">Ajouter une oeuvre</a></button>
                 </div>
                 <div class="row justify-content-center m-3">
                     <table class="table">

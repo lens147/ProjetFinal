@@ -19,7 +19,7 @@
         
         <?php include('./vue/layout/header.php'); isset($_SESSION['id_user']);?>
         
-        <h1 class="text-center pt-4 text-light">Bienvenue dans la galérie d'oeuvre d'art</h1>
+        <h2 class="text-center pt-4 text-light h1">Bienvenue dans la galérie d'oeuvre d'art</h2>
         <p class="text-center text-light">Le meilleur de l’art à portée de clic</p>
         <div class="d-flex justify-content-center">
             <p class="col col-md-5 border rounded text-center p-3 mt-3 loginPage">

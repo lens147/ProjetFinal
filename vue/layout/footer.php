@@ -16,9 +16,9 @@
         <div class="row">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
+            <h3 class="h6 text-uppercase mb-4 font-weight-bold">
               BICHE
-            </h6>
+            </h3>
             <p class="text-center">
               BICHE est un lieu qui permet aux amateurs d'art de découvrir de nouveaux artistes.
               BICHE souhaite aider les artistes de talent à développer leur diffusion et trouver de nouveaux collectionneurs grâce au Web.
@@ -30,7 +30,7 @@
 
           <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Productions</h6>
+            <h3 class="h6 text-uppercase mb-4 font-weight-bold">Productions</h3>
             <div>
               <p href="" class="text-white">Bootstrap 5</p>
             </div>
@@ -50,9 +50,9 @@
 
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
+            <h3 class="h6 text-uppercase mb-4 font-weight-bold">
               Lien usuels
-            </h6>
+            </h3>
             <p>
               <a href="http://localhost/CCP/projetFinal/accueil" class="text-white">Accueil</a>
             </p>
@@ -75,7 +75,7 @@
 
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <h3 class="h6 text-uppercase mb-4 font-weight-bold">Contact</h3>
             <p><i class="fas fa-home mr-3"></i> 14, Rue de la belle oeuvre, 88000 Épinal, FR</p>
             <p><i class="fas fa-envelope mr-3"></i> lemaral2931@gmail.com</p>
             <p><i class="fas fa-phone mr-3"></i> + 33 6 14 02 20 22</p>
